@@ -27,9 +27,9 @@ File { backup => false }
 
 node wintest1.ffv51oee2mzudbzha3yizqck5c.dx.internal.cloudapp.net {
   class { 'motd':
-    content => "This worked! Aw yess",
+    content => "This worked! Aw yess. Made a change.",
   }
-} 
+}
 
 
 node default {
