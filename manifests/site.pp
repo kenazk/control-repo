@@ -26,8 +26,6 @@ File { backup => false }
 # specified in the console for that node.
 
 node wintest1.ffv51oee2mzudbzha3yizqck5c.dx.internal.cloudapp.net {
-  include motd
-  
   class { 'motd':
     content => "This worked!/n",
   }
