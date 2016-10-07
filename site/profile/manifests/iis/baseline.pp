@@ -3,18 +3,19 @@ class profile::iis::baseline (
 ) {
 
   # Install Dot Net 4.5 first
-  windowsfeature { 'DOTNET_CLOUDSHOP_SERVER':
-    feature_name => [
-      'NET-Framework-45-Core',
-      'NET-Framework-45-ASPNET',
-      'AS-NET-Framework',
-    ]
+
+  $dot_net = [
+    'NET-Framework-45-Core',
+    'NET-Framework-45-ASPNET',
+    'AS-NET-Framework',
+  ]
+  windowsfeature { 'dot_net':
+    ensure => present,
   } ->
   # Install IIS and dependent features
-  windowsfeature { 'IIS_FOURTHCOFFEE_SERVER':
-    feature_name => [
-      'Web-Server',
-    ]
+  windowsfeature { 'Web-Server':
+    ensure                  => present,
+    installmanagementtools  => true,
   } ->
 #   Stop the Default Website
 #  iis::manage_site { 'Default Web Site':
