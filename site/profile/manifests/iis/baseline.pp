@@ -16,16 +16,11 @@ class profile::iis::baseline (
       'Web-Server',
     ]
   } ->
-  # Stop the Default Website
-  iis_site { 'Default Web Site':
-    ensure   => 'Stopped',
-    app_pool => 'DefaultAppPool',
-    ip       => '*',
-    path     => 'C:\\InetPub\\WWWRoot',
-    port     => '80',
-    protocol => 'http',
-    ssl      => 'false',
-  }
+#   Stop the Default Website
+#  iis::manage_site { 'Default Web Site':
+#    ensure   => 'Stopped',
+#    app_pool => 'DefaultAppPool',
+#  }
 
   file { $root_iis_path:
     ensure => 'directory',
