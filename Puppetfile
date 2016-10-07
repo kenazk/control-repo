@@ -8,7 +8,8 @@ mod 'puppetlabs/powershell', '2.0.2'
 mod 'puppetlabs/motd', '1.4.0'
 # Community Modules
 mod 'puppet/iis', '2.0.2'
-mod 'opentable/windowsfeature', '0.0.2'
+#mod 'opentable/windowsfeature', '0.0.2'
+mod 'admin36/winfeature', '0.0.3'
 
 # Modules from Git
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
