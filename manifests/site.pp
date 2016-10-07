@@ -25,11 +25,9 @@ File { backup => false }
 # will be included in every node's catalog, *in addition* to any classes
 # specified in the console for that node.
 
-#node wintest1.ffv51oee2mzudbzha3yizqck5c.dx.internal.cloudapp.net {
-#  class { 'motd':
-#    content => "This worked! Aw yess. Made a change. Made another change.",
-#  }
-#}
+node wintest1.ffv51oee2mzudbzha3yizqck5c.dx.internal.cloudapp.net {
+    include role::webserver
+}
 
 
 node default {
