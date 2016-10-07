@@ -3,7 +3,6 @@ class profile::iis::baseline (
 ) {
 
   # Install Dot Net 4.5 first
-
   $dot_net = [
     'NET-Framework-45-Core',
     'NET-Framework-45-ASPNET',

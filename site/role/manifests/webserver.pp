@@ -4,4 +4,7 @@ class role::webserver {
   #All roles should include the base profile
   include profile::iis::baseline
 
+  class { 'motd':
+    content => "This got updated",
+  }
 }
