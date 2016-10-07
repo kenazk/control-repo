@@ -1,3 +1,8 @@
+## Name: azure.ps1
+## Author: kenaz@puppet.com
+## Description: Custom fact for determining whether a Windows VM is running in Azure
+## For a more detailed implementation, see here https://gallery.technet.microsoft.com/scriptcenter/Detect-Windows-Azure-aed06d51
+
 # Get the SMBIOS Asset Tag
 $systemEnclosure = Get-WmiObject -class Win32_SystemEnclosure -namespace root\CIMV2
 
