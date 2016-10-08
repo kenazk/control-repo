@@ -17,6 +17,6 @@ mod 'winfeature',
   :git    => 'https://github.com/kenazk/winfeature',
   :commit => 'a99ee0f60f177a8ee7ea024988cceebceef0bdc2'
 
-mod 'apache',
+mod 'iis',
   :git    => 'https://github.com/voxpupuli/puppet-iis',
   :branch => 'master'
