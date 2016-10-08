@@ -12,7 +12,7 @@ class profile::iis::baseline (
   } ->
 #   Stop the Default Website
   iis_site { 'Default Web Site':
-     ensure   => 'Stopped',
+     ensure   => 'stopped',
   }
 
   file { $root_iis_path:
