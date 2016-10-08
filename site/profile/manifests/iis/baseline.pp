@@ -11,10 +11,9 @@ class profile::iis::baseline (
      ensure => 'present',
   } ->
 #   Stop the Default Website
-#  iis::manage_site { 'Default Web Site':
-#    ensure   => 'Stopped',
-#    app_pool => 'DefaultAppPool',
-#  }
+  iis_site { 'Default Web Site':
+     ensure   => 'Stopped',
+  }
 
   file { $root_iis_path:
     ensure => 'directory',
