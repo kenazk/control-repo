@@ -15,7 +15,7 @@ mod 'puppetlabs/motd', '1.4.0'
 # Examples: https://github.com/puppetlabs/r10k/blob/master/doc/puppetfile.mkd#examples
 mod 'winfeature',
   :git    => 'https://github.com/kenazk/winfeature',
-  :commit => 'a99ee0f60f177a8ee7ea024988cceebceef0bdc2'
+  :branch => '0.0.3'
 
 mod 'iis',
   :git    => 'https://github.com/voxpupuli/puppet-iis',
