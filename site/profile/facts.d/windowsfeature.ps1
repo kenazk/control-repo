@@ -1,3 +1,7 @@
+## Name: windowsfeature.ps1
+## Author: ethan@puppet.com
+## Description: Custom fact for enumerating installed Windows Features
+
 $command = {
   $features = @()
 
