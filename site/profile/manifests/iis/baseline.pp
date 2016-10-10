@@ -10,7 +10,7 @@ class profile::iis::baseline (
   winfeature{'Web-Server,Web-WebServer':
      ensure => 'present',
   } ->
-#   Stop the Default Website
+  # Stop the Default Website
   iis_site { 'Default Web Site':
      ensure   => 'stopped',
   }
