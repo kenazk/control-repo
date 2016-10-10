@@ -3,7 +3,7 @@ class profile::iis::baseline (
 ) {
 
   $dotnet_features = ['NET-Framework-45-Core','NET-Framework-45-ASPNET']
-  $iis_features = ['Web-Server','Web-WebServer','Web-Mgmt-Console','Web-Mgmt-Tools']
+  $iis_features = ['Web-Server','Web-WebServer','Web-Asp-Net45']
 
   # Install Dot Net 4.5 first
   windowsfeature { $dotnet_features:
