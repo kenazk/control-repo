@@ -11,9 +11,9 @@ class profile::iis::baseline (
      ensure => 'present',
   } ->
   # Stop the Default Website
-  iis_site { 'Default Web Site':
-     ensure   => 'stopped',
-  }
+#  iis_site { 'Default Web Site':
+#     ensure   => 'stopped',
+#  }
 
   file { $root_iis_path:
     ensure => 'directory',
