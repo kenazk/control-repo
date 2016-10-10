@@ -25,7 +25,7 @@ class profile::iis::fourthcoffee (
     require   => [ File[$defaultwebsitepath], Exec['DownloadFourthCoffee'] ],
   }
 
-  # Setting up FourthCoffee
+  # Setting up FourthCoffee Website
   iis_site { 'FourthCoffee Web Site':
     ensure   => 'started',
     app_pool => 'DefaultAppPool',
