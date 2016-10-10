@@ -7,6 +7,7 @@ mod 'puppetlabs/registry', '1.0.3'
 mod 'puppetlabs/powershell', '2.0.2'
 mod 'puppetlabs/motd', '1.4.0'
 # Community Modules
+mod 'reidmv-unzip', '0.1.2'
 #mod 'puppet/iis', '2.0.2'
 #mod 'opentable/windowsfeature', '0.0.2'
 #mod 'admin36/winfeature', '0.0.3'
