@@ -30,7 +30,7 @@ class profile::iis::fourthcoffee (
     ensure   => 'started',
     app_pool => 'DefaultAppPool',
     ip       => '*',
-    path     => $zipfile,
+    path     => $defaultwebsitepath,
     port     => '80',
     protocol => 'http',
     ssl      => 'false',
