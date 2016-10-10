@@ -5,7 +5,7 @@ class profile::iis::baseline (
   # Install Dot Net 4.5 first
 #  winfeature{'NET-Framework-45-Core,NET-Framework-45-ASPNET':
 #     ensure => 'present',
-  } ->
+#  } ->
   # Install IIS and dependent features
 #  winfeature{'Web-Server,Web-WebServer':
 #     ensure => 'present',
