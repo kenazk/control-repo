@@ -25,8 +25,8 @@ class profile::iis::fourthcoffee (
     require   => [ File[$defaultwebsitepath], Exec['DownloadFourthCoffee'] ],
   }
 
-  # Setting up CloudShop
-  iis_site { 'CloudShop Web Site':
+  # Setting up FourthCoffee
+  iis_site { 'FourthCoffee Web Site':
     ensure   => 'started',
     app_pool => 'DefaultAppPool',
     ip       => '*',
