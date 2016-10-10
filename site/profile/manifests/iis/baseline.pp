@@ -12,11 +12,11 @@ class profile::iis::baseline (
 #  }
 
   $dotnet_features = ['NET-Framework-45-Core','NET-Framework-45-ASPNET']
+  $iis_features = ['Web-Server','Web-WebServer','Web-Mgmt-Console','Web-Mgmt-Tools']
+
   windowsfeature { $dotnet_features:
     ensure => present,
   } ->
-
-  $iis_features = ['Web-Server','Web-WebServer','Web-Mgmt-Console','Web-Mgmt-Tools']
   windowsfeature { $iis_features:
     ensure => present,
   } ->
