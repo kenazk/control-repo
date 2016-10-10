@@ -18,6 +18,10 @@ mod 'winfeature',
   :git    => 'https://github.com/kenazk/winfeature',
   :branch => '0.0.3'
 
+mod 'windowsfeature',
+  :git    => 'https://github.com/kenazk/puppet-windowsfeature',
+  :branch => 'master'
+
 mod 'iis',
   :git    => 'https://github.com/voxpupuli/puppet-iis',
   :branch => 'master'
