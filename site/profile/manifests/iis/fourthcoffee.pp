@@ -1,16 +1,38 @@
 class profile::iis::fourthcoffee (
   $websitename        = 'FourthCoffee',
   $zipname            = 'FourthCoffeeWebSiteContent.zip',
-  $sourcerepo         = 'https://github.com/msutter/fourthcoffee/raw/master',
-  $destinationpath    = 'C:\\inetpub\\FourthCoffee',
-  $defaultwebsitepath = 'C:\\inetpub\\wwwroot',
+  $sourcerepo         = 'https://github.com/kenazk/fourthcoffee/raw/master',
+  $defaultwebsitepath = 'C:\\inetpub\\fourthcoffee',
   $zippath            = 'C:\\tmp'
 ) {
 
-  $zipuri  = "${sourcerepo}\\${zipname}"
+  $zipuri  = "${sourcerepo}/${zipname}"
   $zipfile = "${zippath}\\${zipname}"
 
-  file { [$zippath, $destinationpath, $defaultwebsitepath]:
+  file { [$zippath, $defaultwebsitepath]:
     ensure => 'directory',
+  }
+
+  # Stage the FourthCoffee Website
+  exec { 'DownloadFourthCoffee':
+    command => "iwr -uri '${zipuri}' -OutFile '${zipfile}'",
+    provider => powershell,
+    creates => $zipfile,
+  }
+  unzip { "FourthCoffee Web Data ${zipname}":
+    source    => $zipfile,
+    creates   => "${defaultwebsitepath}\\Global.asax",
+    require   => [ File[$defaultwebsitepath], Exec['DownloadFourthCoffee'] ],
+  }
+
+  # Setting up CloudShop
+  iis_site { 'CloudShop Web Site':
+    ensure   => 'started',
+    app_pool => 'DefaultAppPool',
+    ip       => '*',
+    path     => $zipfile,
+    port     => '80',
+    protocol => 'http',
+    ssl      => 'false',
   }
 }
