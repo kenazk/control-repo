@@ -233,7 +233,7 @@ Function Confirm-AzureVM {
 			$client.Dispose()
 		}
 	}
-	Write-Output 'azure_vm='$detected
+	Write-Output "azure_vm=$detected"
 }
 
 Confirm-AzureVM
