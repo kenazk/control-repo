@@ -9,12 +9,12 @@ class profile::azure::vmss (
   $location           = 'westus',
 ) {
   # Ensure Resource Manager template is on the machine
-  file { 'C:\\temp':
+  file { 'C:/temp':
     ensure => 'directory',
   } ->
-  file { 'C:\\temp\\azureDeployjson':
+  file { 'C:/temp/azureDeploy.json':
     ensure => 'file',
-    source => 'http://raw.githubusercontent.com/kenazk/control-repo/production/scripts/azuredeploy.json'
+    source => 'puppet://modules/azure/azureDeploy.json'
   }
   #azure_resource_group { $website_name:
   #  ensure         => 'present',
