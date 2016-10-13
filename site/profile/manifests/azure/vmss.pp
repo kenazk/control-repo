@@ -16,10 +16,10 @@ class profile::azure::vmss (
     ensure => 'file',
     source => 'puppet:///modules/azure/azuredeploy.json'
   }
-  #azure_resource_group { $website_name:
-  #  ensure         => 'present',
-  #  location       => $location,
-  #} ->
+  azure_resource_group { $website_name:
+    ensure         => 'present',
+    location       => $location,
+  } ->
 
   # Deploys a VM Scale Set Template
   #azure_resource_template { "${website_name}-dep":
