@@ -1,6 +1,14 @@
-## Name: azure.ps1
-## Author: clandis@microsoft.com (https://gallery.technet.microsoft.com/scriptcenter/Detect-Windows-Azure-aed06d51)
-## Description: Custom fact for determining whether a Windows VM is running in Azure
+#  Name:        azure.ps1
+#  Author:      clandis@microsoft.com (https://gallery.technet.microsoft.com/scriptcenter/Detect-Windows-Azure-aed06d51)
+#  Description: Custom fact for determining whether a Windows VM is running in Azure
+#
+#  The script checks if the computer is a Hyper-V guest by verifying that the Vmbus driver is running.
+#
+#  If the Vmbus driver is running, the script does a platform invoke to call Win32 function DhcpRequestParams
+#  to query the DHCP server for option 245. Since Azure VMs must be configured for dynamic IP addresses, and
+#  option 245 is specific to Microsoft Azure, this confirms the VM is running in Microsoft Azure.
+
+
 
 $source = @"
 using System;

@@ -1,6 +1,6 @@
-## Name: azure_alternate.ps1
-## Author: kenaz@puppet.com
-## Description: Alternate custom fact for determining whether a Windows VM is running in Azure
+#  Name: azure_alternate.ps1
+#  Author: kenaz@puppet.com
+#  Description: Alternate custom fact for determining whether a Windows VM is running in Azure
 
 # Get the SMBIOS Asset Tag
 $systemEnclosure = Get-WmiObject -class Win32_SystemEnclosure -namespace root\CIMV2

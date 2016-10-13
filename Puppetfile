@@ -18,3 +18,7 @@ mod 'windowsfeature',
 mod 'iis',
   :git    => 'https://github.com/voxpupuli/puppet-iis',
   :branch => 'master'
+
+mod 'azure'
+  :git    => 'https://github.com/puppetlabs/puppetlabs-azure',
+  :branch => 'master'
