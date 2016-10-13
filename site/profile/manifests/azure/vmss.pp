@@ -7,8 +7,7 @@ class profile::azure::vmss (
   $adminPassword            = 'C:\\tmp',
   $puppetMasterFqdn = '',
   $location = 'westus',
-)
-{
+) {
   # Ensure Resource Manager template is on the machine
   file { 'C:\\temp':
     ensure => 'directory',
