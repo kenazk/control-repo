@@ -1,12 +1,12 @@
 # Creates the Resource Group
 class profile::azure::vmss (
-  $department        = 'prod',
-  $project             = 'FourthCoffeeWebSiteContent.zip',
-  $website_name         = 'https://github.com/kenazk/fourthcoffee/raw/master',
-  $adminUsername = 'C:\\inetpub\\fourthcoffee',
-  $adminPassword            = 'C:\\tmp',
-  $puppetMasterFqdn = '',
-  $location = 'westus',
+  $department         = 'prod',
+  $project            = 'puppetconf',
+  $website_name       = 'fourthcoffee',
+  $adminUsername      = 'admin123',
+  $adminPassword      = 'Admin123_!',
+  $puppetMasterFqdn   = 'puppet0cbe.westus.cloudapp.azure.com',
+  $location           = 'westus',
 ) {
   # Ensure Resource Manager template is on the machine
   file { 'C:\\temp':
