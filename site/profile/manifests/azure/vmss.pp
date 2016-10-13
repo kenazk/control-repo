@@ -19,7 +19,7 @@ class profile::azure::vmss (
   azure_resource_group { $website_name:
     ensure         => 'present',
     location       => $location,
-  } ->
+  } 
 
   # Deploys a VM Scale Set Template
   #azure_resource_template { "${website_name}-dep":
