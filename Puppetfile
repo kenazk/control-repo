@@ -20,5 +20,5 @@ mod 'iis',
   :branch => 'master'
 
 mod 'azure',
-  :git    => 'https://github.com/puppetlabs/puppetlabs-azure',
+  :git    => 'https://github.com/kenazk/puppetlabs-azure',
   :branch => 'master'
