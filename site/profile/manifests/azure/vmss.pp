@@ -14,7 +14,7 @@ class profile::azure::vmss (
   } ->
   file { 'C:/temp/azureDeploy.json':
     ensure => 'file',
-    source => 'puppet:///modules/azure/azureDeploy.json'
+    source => 'puppet:///modules/azure/azuredeploy.json'
   }
   #azure_resource_group { $website_name:
   #  ensure         => 'present',
