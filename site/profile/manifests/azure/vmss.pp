@@ -14,7 +14,7 @@ class profile::azure::vmss (
   } ->
   file { 'C:\\temp\\azureDeployjson':
     ensure => 'file',
-    source => 'puppet:///scripts/azuredeploy.json'
+    source => 'https://raw.githubusercontent.com/kenazk/control-repo/production/scripts/azuredeploy.json'
   }
   #azure_resource_group { $website_name:
   #  ensure         => 'present',
